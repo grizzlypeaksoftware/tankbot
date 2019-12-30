@@ -24,7 +24,7 @@ def Welcome():
 	sleep(1)
 	Stop()
 
-def FunkyDance():
+def No():
 	Stop()
 	Right()
 	sleep(.25)
@@ -33,6 +33,18 @@ def FunkyDance():
 	Right()
 	sleep(.25)
 	Left()
+	sleep(.25)
+	Stop()
+
+def No():
+	Stop()
+	Forward()
+	sleep(.25)
+	Reverse()
+	sleep(.25)
+	Forward()
+	sleep(.25)
+	Reverse()
 	sleep(.25)
 	Stop()
 
