@@ -6,19 +6,16 @@ tankbot.Init()
 while True:
 	if keyboard.is_pressed("s"):
 		tankbot.Stop()
-	if keyboard.is_pressed("f"):
+	if keyboard.is_pressed("up"):
 		tankbot.Forward()
-	if keyboard.is_pressed("b"):
+	if keyboard.is_pressed("down"):
 		tankbot.Reverse()
-	if keyboard.is_pressed("r"):
+	if keyboard.is_pressed("right"):
 		tankbot.Right()
-	if keyboard.is_pressed("l"):
+	if keyboard.is_pressed("left"):
 		tankbot.Left()	
 	if keyboard.is_pressed("q"):
 		tankbot.Stop()
 		break
-	if keyboard.is_pressed("\x1b[A"):
-		print("up")
-		tankbot.Forward()
-		
+	
 tankbot.Close()
