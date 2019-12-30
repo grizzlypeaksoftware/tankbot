@@ -7,7 +7,7 @@ def Init():
 
 	GPIO.setup(3,GPIO.OUT,initial=GPIO.LOW)  #blue
 	GPIO.setup(5,GPIO.OUT,initial=GPIO.LOW)  #green
-	GPIO.setup(16,GPIO.OUT,initial=GPIO.LOW) #yellow
+	GPIO.setup(16,GPIO.OUT,initial=GPIO.LOW) #yellow  
 	GPIO.setup(18,GPIO.OUT,initial=GPIO.LOW) #orange
 
 	Welcome()
@@ -22,6 +22,18 @@ def Welcome():
 	sleep(1)
 	Left()
 	sleep(1)
+	Stop()
+
+def FunkyDance():
+	Stop()
+	Right()
+	sleep(.25)
+	Left()
+	sleep(.25)
+	Right()
+	sleep(.25)
+	Left()
+	sleep(.25)
 	Stop()
 
 def Forward():

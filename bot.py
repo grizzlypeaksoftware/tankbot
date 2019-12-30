@@ -14,6 +14,8 @@ while True:
 		tankbot.Right()
 	if keyboard.is_pressed("left"):
 		tankbot.Left()	
+	if keyboard.is_pressed("1"):
+		tankbot.FunkyDance()	
 	if keyboard.is_pressed("q"):
 		tankbot.Stop()
 		break
