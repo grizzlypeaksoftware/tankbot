@@ -17,5 +17,8 @@ while True:
 	if keyboard.is_pressed("q"):
 		tankbot.Stop()
 		break
-
+	if keyboard.is_pressed("\x1b[A"):
+		print("up")
+		tankbot.Forward()
+		
 tankbot.Close()

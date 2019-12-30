@@ -15,13 +15,13 @@ def Init():
 def Welcome():
 	Stop()
 	Forward()
-	sleep(1)
+	sleep(.5)
 	Reverse()
-	sleep(1)
+	sleep(.5)
 	Right()
-	sleep(2)
+	sleep(1)
 	Left()
-	sleep(2)
+	sleep(1)
 	Stop()
 
 def Forward():
