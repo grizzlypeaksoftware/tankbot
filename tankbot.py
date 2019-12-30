@@ -23,6 +23,7 @@ def Welcome():
 	sleep(2)
 	Left()
 	sleep(2)
+	Stop()
 
 def Forward():
 	GPIO.output(3,GPIO.LOW)
