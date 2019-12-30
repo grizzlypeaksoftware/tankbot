@@ -2,16 +2,54 @@ import RPi.GPIO as GPIO
 import keyboard
 from time import sleep
 
-GPIO.setwarnings(False)
-GPIO.setmode(GPIO.BOARD)
+def Init():
+	GPIO.setwarnings(False)
+	GPIO.setmode(GPIO.BOARD)
 
-GPIO.setup(3,GPIO.OUT,initial=GPIO.LOW)  #blue
-GPIO.setup(5,GPIO.OUT,initial=GPIO.LOW)  #green
-GPIO.setup(16,GPIO.OUT,initial=GPIO.LOW) #yellow
-GPIO.setup(18,GPIO.OUT,initial=GPIO.LOW) #orange
+	GPIO.setup(3,GPIO.OUT,initial=GPIO.LOW)  #blue
+	GPIO.setup(5,GPIO.OUT,initial=GPIO.LOW)  #green
+	GPIO.setup(16,GPIO.OUT,initial=GPIO.LOW) #yellow
+	GPIO.setup(18,GPIO.OUT,initial=GPIO.LOW) #orange
+
+	this.Welcome()
 
 
-def Reset():
+def Welcome():
+	this.Stop()
+	this.Forward()
+	sleep(1)
+	this.Reverse()
+	sleep(1)
+	this.Right()
+	sleep(2)
+	this.Left()
+	sleep(2)
+
+def Forward():
+	GPIO.output(3,GPIO.LOW)
+	GPIO.output(5,GPIO.HIGH)
+	GPIO.output(16,GPIO.LOW)
+	GPIO.output(18,GPIO.HIGH)
+
+def Reverse():
+	GPIO.output(3,GPIO.HIGH)
+	GPIO.output(5,GPIO.LOW)
+	GPIO.output(16,GPIO.HIGH)
+	GPIO.output(18,GPIO.LOW)
+
+def Left():
+	GPIO.output(3,GPIO.HIGH)
+	GPIO.output(5,GPIO.LOW)
+	GPIO.output(16,GPIO.HIGH)
+	GPIO.output(18,GPIO.LOW)
+
+def Right():
+	GPIO.output(3,GPIO.LOW)
+	GPIO.output(5,GPIO.HIGH)
+	GPIO.output(16,GPIO.HIGH)
+	GPIO.output(18,GPIO.LOW)
+
+def Stop():
 	GPIO.output(3,GPIO.LOW)
 	GPIO.output(5,GPIO.LOW)
 	GPIO.output(16,GPIO.LOW)
@@ -19,11 +57,5 @@ def Reset():
 
 
 
-
-
-
-
-
-
-
-GPIO.cleanup()
+def Close():
+	GPIO.cleanup()

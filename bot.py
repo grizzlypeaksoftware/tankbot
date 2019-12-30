@@ -1,3 +1,4 @@
 import tankbot
 
-tankbot.Reset()
+tankbot.Init()
+tankbot.Close()
