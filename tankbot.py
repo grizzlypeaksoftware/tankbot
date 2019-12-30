@@ -15,14 +15,14 @@ def Init():
 
 
 def Welcome():
-	this.Stop()
-	this.Forward()
+	Stop()
+	Forward()
 	sleep(1)
-	this.Reverse()
+	Reverse()
 	sleep(1)
-	this.Right()
+	Right()
 	sleep(2)
-	this.Left()
+	Left()
 	sleep(2)
 
 def Forward():
