@@ -1,5 +1,4 @@
 import RPi.GPIO as GPIO
-import keyboard
 from time import sleep
 
 def Init():
@@ -38,7 +37,7 @@ def Reverse():
 	GPIO.output(18,GPIO.LOW)
 
 def Left():
-	GPIO.output(3,GPIO.HIGH)
+	GPIO.output(3,GPIO.LOW)
 	GPIO.output(5,GPIO.HIGH)
 	GPIO.output(16,GPIO.HIGH)
 	GPIO.output(18,GPIO.LOW)

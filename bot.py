@@ -1,4 +1,5 @@
 import tankbot
+import keyboard
 
 tankbot.Init()
 
