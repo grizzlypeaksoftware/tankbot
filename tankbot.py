@@ -11,7 +11,7 @@ def Init():
 	GPIO.setup(16,GPIO.OUT,initial=GPIO.LOW) #yellow
 	GPIO.setup(18,GPIO.OUT,initial=GPIO.LOW) #orange
 
-	this.Welcome()
+	Welcome()
 
 
 def Welcome():
