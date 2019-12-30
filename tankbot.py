@@ -13,7 +13,6 @@ def Init():
 
 	Welcome()
 
-
 def Welcome():
 	Stop()
 	Forward()
@@ -39,7 +38,7 @@ def Reverse():
 
 def Left():
 	GPIO.output(3,GPIO.HIGH)
-	GPIO.output(5,GPIO.LOW)
+	GPIO.output(5,GPIO.HIGH)
 	GPIO.output(16,GPIO.HIGH)
 	GPIO.output(18,GPIO.LOW)
 
