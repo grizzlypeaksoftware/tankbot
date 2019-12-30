@@ -1,3 +1,3 @@
 import tankbot
 
-Reset()
+tankbot.Reset()
