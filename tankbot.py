@@ -43,10 +43,10 @@ def Left():
 	GPIO.output(18,GPIO.LOW)
 
 def Right():
-	GPIO.output(3,GPIO.LOW)
-	GPIO.output(5,GPIO.HIGH)
-	GPIO.output(16,GPIO.HIGH)
-	GPIO.output(18,GPIO.LOW)
+	GPIO.output(3,GPIO.HIGH)
+	GPIO.output(5,GPIO.LOW)
+	GPIO.output(16,GPIO.LOW)
+	GPIO.output(18,GPIO.HIGH)
 
 def Stop():
 	GPIO.output(3,GPIO.LOW)
