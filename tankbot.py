@@ -36,7 +36,7 @@ def No():
 	sleep(.25)
 	Stop()
 
-def No():
+def Yes():
 	Stop()
 	Forward()
 	sleep(.25)
