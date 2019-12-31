@@ -42,7 +42,9 @@ def ControlSwitch(key, event):
 			print(inst)          # __str__ allows args to be printed directly,
 	if key == "q":
 		tankbot.Stop()
-		return break
+		return False
+	return True
+
 
 def Playback(rec):
 	last_time = None    
@@ -56,16 +58,18 @@ def Playback(rec):
 		key =  event.scan_code or event.name
 		print(event.name)
 
-		ControlSwitch(key, event)
+		check = ControlSwitch(key, event)
 
 
-while True:
+continueLoop = True
+
+while continueLoop:
 
 	key = keyboard.read_key()
 	event = keyboard.read_event()
 
 	print(key)
 
-	ControlSwitch(key, event)
+	continueLoop = ControlSwitch(key, event)
 	
 tankbot.Close()
