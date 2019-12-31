@@ -68,12 +68,18 @@ continueLoop = True
 
 while continueLoop:
 
-	key = keyboard.read_key()
-	event = keyboard.read_event()
+	try:
+		key = keyboard.read_key()
+		event = keyboard.read_event()
 
-	print(key)
-	print(event)
+		print(key)
+		print(event)
 
-	continueLoop = ControlSwitch(key, event)
+		continueLoop = ControlSwitch(key, event)
+
+	except Exception as inst:
+			print(type(inst))    # the exception instance
+			print(inst.args)     # arguments stored in .args
+			print(inst)          # __str__ allows args to be printed directly,
 	
 tankbot.Close()
