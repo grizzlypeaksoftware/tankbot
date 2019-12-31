@@ -9,6 +9,8 @@ recorded = []
 recording_started = False
 
 def ControlSwitch(key, event):
+	if key == "\x1b[A":
+		print("up!")
 	if key == "s":
 		tankbot.Stop()
 	if key == "^[[A":
