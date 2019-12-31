@@ -1,20 +1,15 @@
 import tankbot
 import keyboard
+import time as _time
 
 tankbot.Init()
-
-import time as _time
 
 recorded = []
 recording_started = False
 
 def ControlSwitch(key, event):
-	if key == "\x1b[A":
-		print("up!")
 	if key == "s":
 		tankbot.Stop()
-	if key == "^[[A":
-		tankbot.Forward()
 	if key == "up":
 		tankbot.Forward()
 	if key == "down":
@@ -67,9 +62,11 @@ def Playback(rec):
 continueLoop = True
 
 while continueLoop:
-
+	print("Loop")
 	try:
+		print("Try get key")
 		key = keyboard.read_key()
+		print("Try get event")
 		event = keyboard.read_event()
 
 		print(key)
