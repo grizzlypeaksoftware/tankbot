@@ -8,6 +8,8 @@ recorded = []
 recording_started = False
 
 def ControlSwitch(key, event):
+	global recording_started
+
 	if key == "s":
 		tankbot.Stop()
 	if key == "up":
@@ -54,24 +56,16 @@ def Playback(rec):
 			_time.sleep(event.time - last_time)
 		last_time = event.time
 		key =  event.scan_code or event.name
-		print(event.name)
-
-		check = ControlSwitch(key, event)
+		if event.name != "f2":
+			check = ControlSwitch(event.name, event)
 
 
 continueLoop = True
 
 while continueLoop:
-	print("Loop")
 	try:
-		print("Try get key")
 		key = keyboard.read_key()
-		print("Try get event")
 		event = keyboard.read_event()
-
-		print(key)
-		print(event)
-
 		continueLoop = ControlSwitch(key, event)
 
 	except Exception as inst:
