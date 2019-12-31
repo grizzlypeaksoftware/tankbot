@@ -70,6 +70,7 @@ while continueLoop:
 	event = keyboard.read_event()
 
 	print(key)
+	print(event)
 
 	continueLoop = ControlSwitch(key, event)
 	
