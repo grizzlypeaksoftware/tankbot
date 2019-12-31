@@ -42,7 +42,7 @@ def ControlSwitch(key, event):
 			print(inst)          # __str__ allows args to be printed directly,
 	if key == "q":
 		tankbot.Stop()
-		break
+		return break
 
 def Playback(rec):
 	last_time = None    
