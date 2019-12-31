@@ -40,7 +40,7 @@ def ControlSwitch(key, event):
 			print(type(inst))    # the exception instance
 			print(inst.args)     # arguments stored in .args
 			print(inst)          # __str__ allows args to be printed directly,
-	if key == "q"):
+	if key == "q":
 		tankbot.Stop()
 		break
 
