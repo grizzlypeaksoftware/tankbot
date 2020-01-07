@@ -73,7 +73,7 @@ def Right():
 	GPIO.output(18,GPIO.HIGH)
 
 def Stop():
-	print("Stop Tankbot")
+	#print("Stop Tankbot")
 	GPIO.output(3,GPIO.LOW)
 	GPIO.output(5,GPIO.LOW)
 	GPIO.output(16,GPIO.LOW)

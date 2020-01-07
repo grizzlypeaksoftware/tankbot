@@ -10,8 +10,8 @@ recording_started = False
 def ControlSwitch(key, event):
 	global recording_started
 
-	print(key)
-	print(event.event_type)
+	#print(key)
+	#print(event.event_type)
 
 	if event.event_type == "up":
 		if key == "s":
