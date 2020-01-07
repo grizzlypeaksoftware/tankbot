@@ -11,42 +11,42 @@ def ControlSwitch(key, event):
 	global recording_started
 
 	print(key)
-	print(event)
+	print(event.event_type)
 
-
-	if key == "s":
-		tankbot.Stop()
-	if key == "up":
-		tankbot.Forward()
-	if key == "down":
-		tankbot.Reverse()
-	if key == "right":
-		tankbot.Right()
-	if key == "left":
-		tankbot.Left()	
-	if key == "1":
-		tankbot.No()	
-	if key == "2":
-		tankbot.Yes()	
-	if key == "3":
-		tankbot.Welcome()	
-	if key == "f1":
-		keyboard.start_recording()
-		recording_started = True
-	if key == "f2":
-		try:
-			if recording_started == True:
-				recording_started = False
-				Playback(keyboard.stop_recording())
-			else:
-				Playback(recorded)
-		except Exception as inst:
-			print(type(inst))    # the exception instance
-			print(inst.args)     # arguments stored in .args
-			print(inst)          # __str__ allows args to be printed directly,
-	if key == "q":
-		tankbot.Stop()
-		return False
+	if event.event_type == "up":
+		if key == "s":
+			tankbot.Stop()
+		if key == "up":
+			tankbot.Forward()
+		if key == "down":
+			tankbot.Reverse()
+		if key == "right":
+			tankbot.Right()
+		if key == "left":
+			tankbot.Left()	
+		if key == "1":
+			tankbot.No()	
+		if key == "2":
+			tankbot.Yes()	
+		if key == "3":
+			tankbot.Welcome()	
+		if key == "f1":
+			keyboard.start_recording()
+			recording_started = True
+		if key == "f2":
+			try:
+				if recording_started == True:
+					recording_started = False
+					Playback(keyboard.stop_recording())
+				else:
+					Playback(recorded)
+			except Exception as inst:
+				print(type(inst))    # the exception instance
+				print(inst.args)     # arguments stored in .args
+				print(inst)          # __str__ allows args to be printed directly,
+		if key == "q":
+			tankbot.Stop()
+			return False
 	return True
 
 
