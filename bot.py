@@ -10,6 +10,10 @@ recording_started = False
 def ControlSwitch(key, event):
 	global recording_started
 
+	print(key)
+	print(event)
+
+
 	if key == "s":
 		tankbot.Stop()
 	if key == "up":
